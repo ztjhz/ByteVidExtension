@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "ByteVid",
+  "version": "1.0",
+
+  "description": "Turning long, boring videos into byte sized information. Using the state-of-the-art deep learning technologies, ByteVid can transcribe, translate, extract key words, extract important slides from video, and summarise the content",
+
+  "icons": {
+    "48": "icons/icon.png",
+    "96": "icons/icon@2x.png"
+  },
+  "permissions": ["activeTab"],
+
+  "browser_action": {
+    "default_icon": "icons/icon.png",
+    "default_title": "ByteVid",
+    "default_popup": "popup/index.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["main.js"]
+    }
+  ]
+}
